@@ -9,5 +9,17 @@
 <body ng-app="app" ng-controller="AppController">
 	<H2>{{title}}</H2>
 	<p>Exemple simple d'utilisation de JSON Web Token.</p>
+
+	<div>
+		<h3>Liste des données</h3>
+		<div>
+			<p ng-repeat="data in datas">
+				{{ data.info }}
+			</p>
+		</div>
+		<input type="text" placeholder="data" name="" ng-model="newData">
+		<button type="button" ng-click="addData()">Ajouter</button>
+		<button type="button" ng-click="deleteData()">Supprimer les données</button>
+	</div>
 </body>
 </html>
